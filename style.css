@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color:  #121212; /*Define a cor do fundo da tela*/
+    color: #ffffff; /*Define a cor das letras*/
+    padding: 20; /*Espaço interno ao redor do conteúdo*/
+}
+
+.container{
+    max-width: 600px; /*Define o contêiner para no máximo600 px*/
+    margin: auto; /*Centraliza o contêiner horizontalmente na página*/
+    background-color: #1e1e1e;  /*Define a cor de fundo */
+    padding: 30px;/*Espaçamento interno do conteiner*/
+    border-radius: 12px;/*Arredonda o container*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);/*Adiciona uma sombra ao redor do contêiner*/
+}
+
+#mes-filtro{
+    margin-bottom:20px;
+}
+
+h1, h2 {
+    text-align: center; /*centralizar texto*/
+    margin-bottom: 20px; /*Adiciona uma margem de 20pxls na parte inferior dos titulos*/
+    font-weight: 600; /*Define a espessura da fonte*/
+}
+
+form {
+    display: flex;/* Formulário no modelo de layout Flexbox*/
+    flex-direction: column;/*Usar o flexbox em column*/
+    gap: 10px;/*Define o espaço entre os itens dentro do formulário*/
+    margin-bottom: 20px;/*Adiciona uma margem de 20pxls na parte inferior*/
+}
+
+input, select, button {
+    padding: 10px;/*espaçamento interno*/
+    border-radius: 12px;/*arredondar as bordas*/
+    border: none;
+    font-size: 1rem;
+}
+
+input, select {
+        background-color: #3c3939;
+        color:#ffffff
+}
+
+select {
+        cursor: pointer;
+}
+
+select:hover{
+    background-color: #575353; /*muda cor ao passar por cima*/
+}
+
+button{
+    background-color: #00c853;
+    color: black;
+    cursor: pointer; /*muda o cursor quando passa em cima*/
+}
+
+button:hover{
+    background-color: #00e676;/*muda cor ao passar por cima*/
+}
+
+#resumo p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+#lista-registros {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#lista-registros li {
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 6px solid#00c853;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+}
+
+#lista-registros li.variavel {
+    border-left: 6px solid red;
+}
+
+#lista-registros li.fixo{
+    border-left: 6px solid yellow;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #ccc;
+    font-size: 14px;
+  }
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Controle Financeiro</h1>
+
+        <!-- Filtro de mês para exibir os dados -->
+        <label for="mes-filtro">Selecionar mês:</label>
+        <select id="mes-filtro">
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+
+        <form id="form">
+            <input type="text" id="descricao" placeholder="Descrição" required />
+            <input type="number" id="valor" placeholder="Valor" required />
+            <select id="tipo" name="tipo" required>
+                <option value="renda">Renda</option>
+                <option value="fixo">Custo Fixo</option>
+                <option value="variavel">Custo Variável</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div id="resumo">
+            <p>💰 Renda: R$ <span id="total-renda">0.00</span></p>
+            <p>📦 Custo Fixo: R$ <span id="total-fixo">0.00</span></p>
+            <p>🔄 Custo Variável: R$ <span id="total-variavel">0.00</span></p>
+            <p>🧮 Saldo: R$ <span id="saldo">0.00</span></p>
+        </div>
+
+        <h2>Resumo Visual</h2>
+        <canvas id="grafico-resumo" width="400" height="200"></canvas>
+        <h2>Registros</h2>
+        <ul id="lista-registros"></ul>
+
+        <footer id="footer">
+            <p>Todos os direitos reservados®</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
